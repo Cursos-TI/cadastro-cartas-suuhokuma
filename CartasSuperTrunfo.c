@@ -6,13 +6,14 @@ int main (){
     char estado1[50];
     char cidade1[50];
     char codigo1[50];
+    float densidade1, percapita1;
 
   int populacao2, pontosTuristicos2;
     float area2, pib2;
     char estado2[50];
     char cidade2[50];
     char codigo2[50];
-
+  float densidade2, percapita2;
 
 printf("Digite o estado da carta 1: \n");
 scanf("%s", estado1);
@@ -43,6 +44,15 @@ printf("Pontos turisticos: %d\n", pontosTuristicos1);
 printf("PIB: %f\n", pib1);
 printf("area: %f\n", area1);
 
+//cálculo da densidade populacional e PIB per capita
+densidade1 = (populacao1 / area1);
+percapita1 = (pib1 * 1000000000.0) / populacao1;
+
+printf("Baseado nessas informacoes, podemos dizer que:\n");
+printf("A densidade populacional e: %.2f\n", densidade1);
+printf("O PIB per capita e: %.2f\n", percapita1);
+
+
 printf("Digite os mesmos dados, agora da carta 2. \n");
 printf("Digite o estado da carta 2: \n");
 scanf("%s", estado2);
@@ -72,6 +82,15 @@ printf("Populacao: %d\n", populacao2);
 printf("Pontos turisticos: %d\n", pontosTuristicos2);
 printf("PIB: %f\n", pib1);
 printf("area: %f\n", area1);
+
+//cálculo da densidade populacional e PIB per capita
+densidade2 = (populacao2 / area2);
+percapita2 = (pib2 * 1000000000.0) / populacao2;
+
+printf("Baseado nessas informacoes, podemos dizer que:\n");
+printf("A densidade populacional e: %.2f\n", densidade2);
+printf("O PIB per capita e: %.2f\n", percapita2);
+
 
 return 0;
 
